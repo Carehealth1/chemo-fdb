@@ -217,7 +217,7 @@ def main():
                         
                         if pdf_text:
                             # Process with Claude
-                            client = anthropic.Anthropic(api_key=anthropic_api_key)
+                            client = anthropic.Client(api_key=anthropic_api_key)
                             response = client.messages.create(
                                 model="claude-3-opus-20240229",
                                 max_tokens=4096,
